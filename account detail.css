@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+  
+.vertical-menu {
+  width: 240px;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+  
+.vertical-menu .menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+  
+.vertical-menu .logo {
+  max-width: 200px;
+  margin-bottom: 0;
+}
+  
+.vertical-menu a {
+  background-color: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+  
+.vertical-menu a i {
+  margin-right: 12px;
+}
+  
+.vertical-menu a:hover {
+  background-color: red;
+}
+  
+.vertical-menu a.active {
+  background-color: #0079d3;
+  color: white;
+}
+  
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f6f6f6;
+  width: calc(100% - 240px);
+  margin-left: 220px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+i {
+  margin-right: 30px;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-top: 7%;
+}
+
+.user-info {
+  display: flex;
+  margin-left: 25%;
+}
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.details {
+  font-size: 1.5em;
+  font-weight: bold;
+  align-self: center; /* 垂直居中 */
+}
+
+.up {
+  display: flex;
+  align-items: center;
+}
+
+
+.custom-file-upload {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  float: right;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .vertical-menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .vertical-menu a {
+    float: left;
+  }
+
+}
+
+.account, .account2 {
+  margin-left: 16%;
+  margin-top: 50px;
+  
+}
+
+.box {
+  flex: 1 1 45%;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+fieldset {
+  border-radius: 10px;
+  color: red;
+}
+
+.details-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂  直居中对齐 */
+  margin-bottom: 10px;
+  color: black;
+}
+
+.details {
+  flex: 1;
+  margin: 30px;
+  margin-right: 10px; /* 适当调整冒号后的间距 */
+  flex-shrink: 0; /* 防止标签缩小 */
+} 
+
+.input-container {
+  flex: 1;
+}
+
+.gender-select {
+  width: 200px !important; /* 使用 !important 确保样式被应用 */
+  padding: 5px !important;
+  font-size: 16px !important;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.input-box {
+  flex: 1; /* Fill remaining space in the container */
+  margin-right: 42px;
+}
+
+.input-box label {
+  min-width: 1000px; /* Adjust this value to align the colons */
+  color: red;
+}
+
+
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box input[type="password"],
+.input-box input[type="phone_number"],
+.input-box input[type="address"] {
+  width: 60%; /* 让输入框填充父容器的剩余宽度 */
+  padding: 8px; /* 可选：增加内边距 */
+  box-sizing: border-box; /* 确保 padding 不会增加元素的实际宽度 */
+  border-radius: 10px; /* 添加圆角 */
+}
+
+.error-message {
+  color: black ;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    flex: 1 1 100%;
+  }
+
+  .details-group {
+    flex-direction: column;
+  }
+}
+
+.button {
+  position: relative;
+  background-color: red;
+  border: none;
+  font-size: 20px;
+  color: white;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  float: right;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.button:after {
+  content: "";
+  background: red;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+
